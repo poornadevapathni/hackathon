@@ -1,14 +1,12 @@
 import chart_studio.plotly as py
 import plotly.graph_objects as go
-
-trace0 = go.Scatter(
-    x=[1, 2, 3, 4],
-    y=[10, 15, 13, 17]
-)
-trace1 = go.Scatter(
-    x=[1, 2, 3, 4],
-    y=[16, 5, 11, 9]
-)
-data = [trace0, trace1]
-
-py.iplot(data, filename = 'basic-line', auto_open=True)
+import pandas as pd
+import plotly.graph_objects as go
+import plotly.express as px
+df = pd.read_csv('SalesRec.csv')
+#fig = go.Figure(go.bar(x=df.Country, y='df.Total Profit', text='df.Sales Channel'))
+fig = px.bar(df)
+#fig.update_layout(barmode='group')
+#fig.update_xaxes(title_text='GDP per Capita', type='log')
+#fig.update_yaxes(title_text='Life Expectancy')
+fig.show()
