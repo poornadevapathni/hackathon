@@ -18,4 +18,4 @@ CMD ls -ltr
 #iCMD python3 main.py
 WORKDIR .
 
-CMD ["python3", "readCSVChart.py"]
+CMD ["python3", "main.py"]
